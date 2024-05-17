@@ -1,5 +1,8 @@
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import { useFonts } from 'expo-font';
+import CardPage from '../Components/CardPage';
+import TransactionPage from '../Components/TransactionPage';
+
 
 const loadFonts = () => {
     return useFonts({
@@ -7,8 +10,6 @@ const loadFonts = () => {
         PoppinsBold: require('../Fonts/Poppins-Bold.ttf')
     })
 }
-
-
 
 export default function Design() {
     const [loaded] = loadFonts();
@@ -18,7 +19,7 @@ export default function Design() {
     }
 
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.container} showsHorizontalScrollIndicator={false}>
             <View >
                 <View style={styles.view1}>
                     <View style={styles.view1sub}>
@@ -33,12 +34,34 @@ export default function Design() {
                 </View>
                 <View style={styles.view3}>
                     <View>
-                        <Text style={styles.text2}>$13,000.00</Text>
+                        <Text style={styles.text2}>$ 8,580.00</Text>
                     </View>
                     <View>
                         <Text style={styles.text3}>Balance</Text>
                     </View>
                 </View>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} fadingEdgeLength={10}>
+                    <View style={{ display: "flex", flexDirection: "row" }}>
+                        <CardPage />
+                        <CardPage />
+                        <CardPage/>
+                    </View>
+                </ScrollView>
+                <View>
+                    <Text style={styles.text4}>Recepients</Text>
+                </View>
+                <View style={styles.view4}>
+                    <Image source={require("../UserImages/img1.jpg")} style={styles.profilepic}/>
+                    <Image source={require("../UserImages/img2.jpg")} style={styles.profilepic}/>
+                    <Image source={require("../UserImages/img3.jpg")} style={styles.profilepic}/>
+                    <Image source={require("../UserImages/img4.jpg")} style={styles.profilepic}/>
+                </View>
+            </View>
+            <View>
+                <Text style={styles.text4}>Transaction History</Text>
+            </View>
+            <View>
+                <TransactionPage/>
             </View>
         </ScrollView>
     )
@@ -91,11 +114,27 @@ const styles = StyleSheet.create({
         marginLeft: "15%",
         marginTop: "12%",
         color: "#91908D",
-        fontSize:20
+        fontSize: 20
     },
     view3: {
         display: "flex",
         flexDirection: "row",
         marginTop: "5%"
+    },
+    text4:{
+        fontFamily:"PoppinsRegular",
+        fontSize:20,
+        marginLeft:"5%",
+        marginTop:"7%"
+    },
+    profilepic:{
+        height:60,
+        width:60,
+        borderRadius:30,
+        marginLeft:20,
+        marginTop:10
+    },
+    view4:{
+        flexDirection:"row"
     }
 })
