@@ -11,6 +11,7 @@ const loadFonts = () => {
     })
 }
 
+
 export default function Design() {
     const [loaded] = loadFonts();
 
@@ -60,8 +61,18 @@ export default function Design() {
             <View>
                 <Text style={styles.text4}>Transaction History</Text>
             </View>
-            <View style={styles.view5}>
-                <ScrollView showsVerticalScrollIndicator={false}>
+            <View style={styles.view5} nestedScrollEnabled={false}>
+                <ScrollView scrollEventThrottle={1}>
+                    <TransactionPage />
+                    <TransactionPage />
+                    <TransactionPage />
+                    <TransactionPage />
+                    <TransactionPage />
+                    <TransactionPage />
+                    <TransactionPage />
+                    <TransactionPage />
+                    <TransactionPage />
+                    <TransactionPage />
                     <TransactionPage />
                     <TransactionPage />
                     <TransactionPage />
@@ -145,6 +156,5 @@ const styles = StyleSheet.create({
     },
     view5:{
         height:200,
-        backgroundColor:"white"
     }
 })
