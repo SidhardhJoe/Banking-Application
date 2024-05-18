@@ -19,7 +19,7 @@ export default function Design() {
     }
 
     return (
-        <ScrollView style={styles.container} showsHorizontalScrollIndicator={false}>
+        <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
             <View >
                 <View style={styles.view1}>
                     <View style={styles.view1sub}>
@@ -40,28 +40,34 @@ export default function Design() {
                         <Text style={styles.text3}>Balance</Text>
                     </View>
                 </View>
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} fadingEdgeLength={10}>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                     <View style={{ display: "flex", flexDirection: "row" }}>
                         <CardPage />
                         <CardPage />
-                        <CardPage/>
+                        <CardPage />
                     </View>
                 </ScrollView>
                 <View>
                     <Text style={styles.text4}>Recepients</Text>
                 </View>
                 <View style={styles.view4}>
-                    <Image source={require("../UserImages/img1.jpg")} style={styles.profilepic}/>
-                    <Image source={require("../UserImages/img2.jpg")} style={styles.profilepic}/>
-                    <Image source={require("../UserImages/img3.jpg")} style={styles.profilepic}/>
-                    <Image source={require("../UserImages/img4.jpg")} style={styles.profilepic}/>
+                    <Image source={require("../UserImages/img1.jpg")} style={styles.profilepic} />
+                    <Image source={require("../UserImages/img2.jpg")} style={styles.profilepic} />
+                    <Image source={require("../UserImages/img3.jpg")} style={styles.profilepic} />
+                    <Image source={require("../UserImages/img4.jpg")} style={styles.profilepic} />
                 </View>
             </View>
             <View>
                 <Text style={styles.text4}>Transaction History</Text>
             </View>
-            <View>
-                <TransactionPage/>
+            <View style={styles.view5}>
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    <TransactionPage />
+                    <TransactionPage />
+                    <TransactionPage />
+                    <TransactionPage />
+                    <TransactionPage />
+                </ScrollView>
             </View>
         </ScrollView>
     )
@@ -121,20 +127,24 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         marginTop: "5%"
     },
-    text4:{
-        fontFamily:"PoppinsRegular",
-        fontSize:20,
-        marginLeft:"5%",
-        marginTop:"7%"
+    text4: {
+        fontFamily: "PoppinsRegular",
+        fontSize: 20,
+        marginLeft: "5%",
+        marginTop: "7%"
     },
-    profilepic:{
-        height:60,
-        width:60,
-        borderRadius:30,
-        marginLeft:20,
-        marginTop:10
+    profilepic: {
+        height: 60,
+        width: 60,
+        borderRadius: 30,
+        marginLeft: 20,
+        marginTop: 10
     },
-    view4:{
-        flexDirection:"row"
+    view4: {
+        flexDirection: "row"
+    },
+    view5:{
+        height:200,
+        backgroundColor:"white"
     }
 })
