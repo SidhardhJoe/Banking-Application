@@ -61,8 +61,8 @@ export default function Design() {
             <View>
                 <Text style={styles.text4}>Transaction History</Text>
             </View>
-            <View style={styles.view5} nestedScrollEnabled={false}>
-                <ScrollView scrollEventThrottle={1}>
+            <View style={styles.view5} >
+                <ScrollView showsHorizontalScrollIndicator={false}>
                     <TransactionPage />
                     <TransactionPage />
                     <TransactionPage />

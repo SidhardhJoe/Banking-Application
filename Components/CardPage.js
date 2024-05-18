@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import LinearGradient from 'react-native-linear-gradient';
+
 
 const CardPage = () => {
   return (
-    <View style={styles.carddesign}>
-    </View>
+    <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.carddesign}>
+    </LinearGradient>
   )
 }
 
@@ -14,7 +16,7 @@ const styles = StyleSheet.create({
     carddesign:{
         height:220,
         width:360,
-        backgroundColor:"black",
+        backgroundColor:"purple-red",
         borderRadius:20,
         marginLeft:15,
         marginRight:10
