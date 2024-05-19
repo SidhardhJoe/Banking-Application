@@ -53,7 +53,7 @@ export default function Design() {
                     <Text style={styles.text4}>Recepients</Text>
                 </View>
                 <View style={styles.view4}>
-                    <Image source={require("../UserImages/img1.jpg")} style={styles.profilepic} />
+                    <Image source={require("../UserImages/img1.jpg")} style={styles.profilepic}/>
                     <Image source={require("../UserImages/img2.jpg")} style={styles.profilepic} />
                     <Image source={require("../UserImages/img3.jpg")} style={styles.profilepic} />
                     <Image source={require("../UserImages/img4.jpg")} style={styles.profilepic} />

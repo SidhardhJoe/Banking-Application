@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image,TouchableOpacity } from 'react-native'
 import React from 'react'
 
 
-const CardPage = () => {
+const CardPage = ({navigation}) => {
   return (
-    <View style={styles.carddesign}>
+    <TouchableOpacity onPress={() => navigation.navigate('TestPage')}>
+    <View style={styles.carddesign}  >
       <View style={{ flexDirection: "row" }}>
         <View >
           <Text style={styles.text1}>
@@ -23,6 +24,8 @@ const CardPage = () => {
         <Image source={require("../Icons/MasterCard.png")} style={styles.cardlogo} />
       </View>
     </View>
+    </TouchableOpacity>
+    
   )
 }
 
@@ -31,11 +34,10 @@ export default CardPage
 const styles = StyleSheet.create({
   carddesign: {
     height: 220,
-    width: "35%",
+    width: 350,
     backgroundColor: "black",
     borderRadius: 20,
     marginLeft: 15,
-    marginRight: 10,
     backgroundColor: 'rgba(0,0,0,0.4)'
   },
   text1: {
