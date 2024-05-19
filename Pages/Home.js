@@ -1,4 +1,4 @@
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Image, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import { useFonts } from 'expo-font';
 import CardPage from '../Components/CardPage';
 import TransactionPage from '../Components/TransactionPage';
@@ -21,6 +21,7 @@ export default function Design() {
 
     return (
         <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+            <StatusBar></StatusBar>
             <View >
                 <View style={styles.view1}>
                     <View style={styles.view1sub}>
