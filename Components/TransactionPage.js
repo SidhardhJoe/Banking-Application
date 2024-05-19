@@ -8,6 +8,7 @@ const TransactionPage = () => {
       <View style={styles.view1}>
         <Image source={require("../Icons/fuel.png")} style={styles.img1}/>
         <Text style={styles.textdetails}>Food</Text>
+        <Text style={styles.text1}>-45$</Text>
       </View>
       </View>
     </View>
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
     borderRadius:10,
     flexDirection:"row",
     
+    
   },
   img1:{
     height:35,
@@ -48,6 +50,15 @@ const styles = StyleSheet.create({
     marginLeft:20,
     width:50,
     fontFamily:"PoppinsBold",
-    fontSize:18
+    fontSize:18,
+  },
+  text1:{
+    fontFamily:"PoppinsBold",
+    marginLeft:"330%",
+    width:"100%",
+    marginTop:11,
+    fontSize:17
+    
+
   }
 })
