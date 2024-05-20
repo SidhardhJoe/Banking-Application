@@ -2,9 +2,9 @@ import { StyleSheet, Text, View, Image,TouchableOpacity } from 'react-native'
 import React from 'react'
 
 
-const CardPage = ({navigation}) => {
+const CardPage = () => {
   return (
-    <TouchableOpacity onPress={() => navigation.navigate('TestPage')}>
+    
     <View style={styles.carddesign}  >
       <View style={{ flexDirection: "row" }}>
         <View >
@@ -24,7 +24,6 @@ const CardPage = ({navigation}) => {
         <Image source={require("../Icons/MasterCard.png")} style={styles.cardlogo} />
       </View>
     </View>
-    </TouchableOpacity>
     
   )
 }

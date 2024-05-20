@@ -2,6 +2,7 @@ import { Image, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-nati
 import { useFonts } from 'expo-font';
 import CardPage from '../Components/CardPage';
 import TransactionPage from '../Components/TransactionPage';
+import ExpensePage from '../Components/ExpensePage';
 
 
 const loadFonts = () => {
@@ -53,7 +54,7 @@ export default function Design() {
                     <Text style={styles.text4}>Recepients</Text>
                 </View>
                 <View style={styles.view4}>
-                    <Image source={require("../UserImages/img1.jpg")} style={styles.profilepic}/>
+                    <Image source={require("../UserImages/img1.jpg")} style={styles.profilepic} />
                     <Image source={require("../UserImages/img2.jpg")} style={styles.profilepic} />
                     <Image source={require("../UserImages/img3.jpg")} style={styles.profilepic} />
                     <Image source={require("../UserImages/img4.jpg")} style={styles.profilepic} />
@@ -63,7 +64,7 @@ export default function Design() {
                 <Text style={styles.text4}>Transaction History</Text>
             </View>
             <View style={styles.view5} >
-                <ScrollView showsHorizontalScrollIndicator={false}>
+                <ScrollView showsVerticalScrollIndicator={false}>
                     <TransactionPage />
                     <TransactionPage />
                     <TransactionPage />
@@ -80,6 +81,9 @@ export default function Design() {
                     <TransactionPage />
                     <TransactionPage />
                 </ScrollView>
+            </View>
+            <View>
+                <ExpensePage />
             </View>
         </ScrollView>
     )
@@ -155,7 +159,7 @@ const styles = StyleSheet.create({
     view4: {
         flexDirection: "row"
     },
-    view5:{
-        height:200,
+    view5: {
+        height: 220,
     }
 })
