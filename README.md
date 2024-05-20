@@ -6,7 +6,7 @@ This is a simple front page of a banking application that i created.
 
 ## Images
 
-<img src="https://github.com/SidhardhJoe/MeowGram/blob/main/assets/ScreenShots/Screenshot_1715584585.png" width="350" height="800" /> 
+<img src="https://github.com/SidhardhJoe/Banking-Application/blob/master/assets/Screenshot_1716179400.png" width="350" height="800" /> 
 
 
 
