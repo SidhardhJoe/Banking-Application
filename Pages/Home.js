@@ -2,7 +2,6 @@ import { Image, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-nati
 import { useFonts } from 'expo-font';
 import CardPage from '../Components/CardPage';
 import TransactionPage from '../Components/TransactionPage';
-import ExpensePage from '../Components/ExpensePage';
 
 
 const loadFonts = () => {
@@ -60,6 +59,7 @@ export default function Design() {
                     <Image source={require("../UserImages/img4.jpg")} style={styles.profilepic} />
                 </View>
             </View>
+            
             <View>
                 <Text style={styles.text4}>Transaction History</Text>
             </View>
@@ -82,9 +82,7 @@ export default function Design() {
                     <TransactionPage />
                 </ScrollView>
             </View>
-            <View>
-                <ExpensePage />
-            </View>
+            
         </ScrollView>
     )
 }
