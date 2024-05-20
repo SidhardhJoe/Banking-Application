@@ -1,4 +1,4 @@
-# MeowGram
+# Banking Page
 
 This is a simple front page of a banking application that i created. 
 
